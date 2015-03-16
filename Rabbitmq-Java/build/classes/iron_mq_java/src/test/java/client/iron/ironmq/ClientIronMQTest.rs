@@ -1,1 +1,0 @@
-client.iron.ironmq.ClientIronMQTest
