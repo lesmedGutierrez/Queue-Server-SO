@@ -1,0 +1,64 @@
+c:\users\lab sirzee\documents\visual studio 2013\Projects\Rabbitmq\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\bin\Debug\Rabbitmq.exe
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\bin\Debug\Rabbitmq.pdb
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.exe
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\obj\Debug\Rabbitmq.pdb
+C:\Users\LAB SIRZEE\Documents\Visual Studio 2013\Projects\Rabbitmq\Rabbitmq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+C:\Users\LAB SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.dll
+C:\Users\SIRZEE\Downloads\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.xml
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.xml
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+C:\Users\SIRZEE\Desktop\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.xml
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+E:\2015\Principios de sistemas operativos\Proyecto I\Proyecto 3\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.xml
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
+E:\2015\Principios de sistemas operativos\Proyecto I\CONEJO\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
+E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
+E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
