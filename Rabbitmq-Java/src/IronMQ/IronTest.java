@@ -24,7 +24,7 @@ public class IronTest {
     
     
     
-    public static void main(String[] args){
+    public void main(String[] args){
         String project = "5505e6df2d0412000600001c";
         String token = "D4YXJjgT6sldvBcpOvwcCuybmuY";
         
