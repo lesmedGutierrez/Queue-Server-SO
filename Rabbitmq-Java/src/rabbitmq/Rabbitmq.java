@@ -6,6 +6,8 @@
 
 package rabbitmq;
 
+import Forms.Form1;
+
 /**
  *
  * @author LAB SIRZEE

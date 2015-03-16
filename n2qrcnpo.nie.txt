@@ -1,0 +1,67 @@
+﻿Cambios en la configuracion de las carpetas
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	modified:   Rabbitmq-Java/build.xml
+#	renamed:    Rabbitmq-Java/build/classes/rabbitmq/Form1.form -> Rabbitmq-Java/build/classes/Forms/Form1.form
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/IronTest.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Alert.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Alerts.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Client.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Cloud.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/EmptyQueueException.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/HTTPException.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Ids.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/IronReader.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Message.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/MessagePushModel.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Messages.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/MessagesArrayList.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Queue.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/QueueModel.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Queues.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Subscriber.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/Subscribers.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/main/java/io/iron/ironmq/SubscribersInfo.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/test/java/client/iron/ironmq/ClientIronMQTest.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/test/java/io/iron/ironmq/CloudTest.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/src/test/java/io/iron/ironmq/IronMQTest.rs
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+#	new file:   Rabbitmq-Java/build/classes/iron_mq_java/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+#	deleted:    Rabbitmq-Java/build/classes/rabbitmq/Form1$1.class
+#	deleted:    Rabbitmq-Java/build/classes/rabbitmq/Form1$2.class
+#	deleted:    Rabbitmq-Java/build/classes/rabbitmq/Form1$3.class
+#	deleted:    Rabbitmq-Java/build/classes/rabbitmq/Form1.class
+#	modified:   Rabbitmq-Java/build/classes/rabbitmq/Rabbitmq.class
+#	deleted:    Rabbitmq-Java/dist/README.TXT
+#	deleted:    Rabbitmq-Java/dist/Rabbitmq.jar
+#	deleted:    Rabbitmq-Java/dist/lib/commons-cli-1.1.jar
+#	deleted:    Rabbitmq-Java/dist/lib/commons-io-1.2.jar
+#	deleted:    Rabbitmq-Java/dist/lib/gson-2.3.jar
+#	deleted:    Rabbitmq-Java/dist/lib/junit.jar
+#	deleted:    Rabbitmq-Java/dist/lib/rabbitmq-client-tests.jar
+#	deleted:    Rabbitmq-Java/dist/lib/rabbitmq-client.jar
+#	deleted:    Rabbitmq-Java/dist/lib/sqljdbc4-3.0.jar
+#	deleted:    Rabbitmq-Java/dist/lib/sqljdbc_auth.dll
+#	deleted:    Rabbitmq-Java/dist/sqljdbc4-3.0.jar
+#	deleted:    Rabbitmq-Java/dist/sqljdbc_auth.dll
+#	modified:   Rabbitmq-Java/nbproject/build-impl.xml
+#	modified:   Rabbitmq-Java/nbproject/genfiles.properties
+#	modified:   Rabbitmq-Java/nbproject/project.properties
+#	modified:   Rabbitmq-Java/nbproject/project.xml
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/LICENSE
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/LICENSE-APACHE2
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/LICENSE-GPL2
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/LICENSE-MPL-RabbitMQ
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/runjava.bat
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/runjava.sh
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/runperftest.sh
+#	new file:   Rabbitmq-Java/rabbitmq-java-client-bin-3.5.0/stresspersister.sh
+#	renamed:    Rabbitmq-Java/src/rabbitmq/Form1.form -> Rabbitmq-Java/src/Forms/Form1.form
+#	renamed:    Rabbitmq-Java/src/rabbitmq/Form1.java -> Rabbitmq-Java/src/Forms/Form1.java
+#	new file:   Rabbitmq-Java/src/IronMQ/IronTest.java
+#	modified:   Rabbitmq-Java/src/rabbitmq/Rabbitmq.java
+#
+
