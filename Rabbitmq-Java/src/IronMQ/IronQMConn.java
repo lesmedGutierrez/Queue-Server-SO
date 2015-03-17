@@ -15,16 +15,18 @@ import java.util.logging.Logger;
  * and open the template in the editor.
  */
 
+import Conexion.SQL_Server;
 /**
  *
  * @author Lesmed
  */
-public class IronTest {
+public class IronQMConn {
+    
+    SQL_Server sqlserver = new SQL_Server();
     
     
-    
-    
-    public void main(String[] args){
+    //public void main(String[] args){
+    public void producir(int ciclos){
         String project = "5505e6df2d0412000600001c";
         String token = "D4YXJjgT6sldvBcpOvwcCuybmuY";
         
@@ -32,7 +34,7 @@ public class IronTest {
         Queue queue = client.queue("test-queue");
 
         try {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < ciclos; i++) {
                 // Put a message on the queue
                 queue.push("Hello, world!"); // Get a message
                 Message msg = queue.get();
@@ -43,8 +45,9 @@ public class IronTest {
             }
             
         } catch (IOException ex) {
-            Logger.getLogger(IronTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(IronQMConn.class.getName()).log(Level.SEVERE, null, ex);
         }
+        sqlserver.conectar();
 
        
 
