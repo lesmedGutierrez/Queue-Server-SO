@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Iron.IronWorker</id>
+    <version>1.0.2</version>
+    <title>IronWorker</title>
+    <authors>Jeremy Bell</authors>
+    <owners>Jeremy Bell</owners>
+    <licenseUrl>https://raw.github.com/iron-io/iron_dotnet/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/iron-io/iron_dotnet</projectUrl>
+    <iconUrl>https://raw.github.com/iron-io/iron_dotnet/master/images/net-iron-w.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An easy-to-use scalable task queue that gives cloud developers a simple way to offload front-end tasks, run scheduled jobs, and process tasks in the background and at scale.</description>
+    <releaseNotes>Added generate Webhook URI method</releaseNotes>
+    <tags>iron.io cloud workers task scheduling</tags>
+    <dependencies>
+      <dependency id="Iron.IronCore" />
+      <dependency id="Newtonsoft.Json" />
+    </dependencies>
+  </metadata>
+</package>

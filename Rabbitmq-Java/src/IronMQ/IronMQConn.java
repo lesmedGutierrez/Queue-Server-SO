@@ -27,7 +27,7 @@ public class IronMQConn {
     //public void main(String[] args){
     public void producir(int ciclos){
         String project = "5505e6df2d0412000600001c";
-        String token = "D4YXJjgT6sldvBcpOcCuybmuY";
+        String token = "D4YXJjgT6sldvBcpOvwcCuybmuY";
         
         Client client = new Client(project, token, Cloud.ironAWSUSEast);
         Queue queue = client.queue("test-queue-lesmed");

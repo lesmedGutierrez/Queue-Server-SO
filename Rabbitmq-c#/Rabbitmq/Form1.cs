@@ -22,6 +22,7 @@ namespace Rabbitmq
         private int num = 1;
         private BackgroundWorker bw = new BackgroundWorker();
         private BackgroundWorker bw2 = new BackgroundWorker();
+        IronMQClass ironmq = new IronMQClass();
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +35,19 @@ namespace Rabbitmq
             if (!textBox1.Text.Equals(""))
                 num  = int.Parse(textBox1.Text);
 
-            Thread newThread = new Thread(() => Producir.ProducirInfo(num));
-            newThread.Start();
+            if (RabbitMQ.Checked)
+            {
+                Thread newThread = new Thread(() => Producir.ProducirInfo(num));
+                newThread.Start();
+            }
+            else
+            {
+                Thread newThread = new Thread(() => ironmq.Producir());
+                newThread.Start();
+
+            }
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

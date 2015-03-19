@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.RabbitMQ = new System.Windows.Forms.RadioButton();
+            this.IronMQ = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // button1
@@ -73,29 +73,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
+            // RabbitMQ
             // 
-            this.pictureBox1.Image = global::Rabbitmq.Properties.Resources.descarga;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.RabbitMQ.AutoSize = true;
+            this.RabbitMQ.Location = new System.Drawing.Point(15, 13);
+            this.RabbitMQ.Name = "RabbitMQ";
+            this.RabbitMQ.Size = new System.Drawing.Size(73, 17);
+            this.RabbitMQ.TabIndex = 4;
+            this.RabbitMQ.TabStop = true;
+            this.RabbitMQ.Text = "RabbitMQ";
+            this.RabbitMQ.UseVisualStyleBackColor = true;
+            // 
+            // IronMQ
+            // 
+            this.IronMQ.AutoSize = true;
+            this.IronMQ.Location = new System.Drawing.Point(15, 36);
+            this.IronMQ.Name = "IronMQ";
+            this.IronMQ.Size = new System.Drawing.Size(60, 17);
+            this.IronMQ.TabIndex = 5;
+            this.IronMQ.TabStop = true;
+            this.IronMQ.Text = "IronMQ";
+            this.IronMQ.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 213);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.IronMQ);
+            this.Controls.Add(this.RabbitMQ);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "RabbitMQ con C#";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +118,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton RabbitMQ;
+        private System.Windows.Forms.RadioButton IronMQ;
     }
 }
 
