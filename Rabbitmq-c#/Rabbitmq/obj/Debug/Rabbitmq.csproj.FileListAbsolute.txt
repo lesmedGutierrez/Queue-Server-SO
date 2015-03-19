@@ -63,27 +63,22 @@ E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbit
 E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
 E:\2015\Principios de sistemas operativos\Proyecto I\RabbitMQ\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe.config
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.exe
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Rabbitmq.pdb
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Common.Logging.dll
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.Core.dll
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronMQ.dll
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Newtonsoft.Json.dll
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\System.Net.Http.Formatting.dll
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Common.Logging.pdb
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Common.Logging.xml
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.Core.pdb
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronMQ.pdb
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\Newtonsoft.Json.xml
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\RabbitMQ.Client.xml
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\System.Net.Http.Formatting.xml
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csprojResolveAssemblyReference.cache
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Form1.resources
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.Properties.Resources.resources
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronCache.dll
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronMQ.dll
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronWorker.dll
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronCache.pdb
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronMQ.pdb
-E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronWorker.pdb
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb

@@ -39,16 +39,10 @@
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="IronSharp.Core">
-      <HintPath>..\packages\Iron.IronCore.3.0.7-on-premise\lib\IronSharp.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSharp.IronCache">
-      <HintPath>..\packages\Iron.IronCache.1.0.2\lib\IronSharp.IronCache.dll</HintPath>
+      <HintPath>..\packages\Iron.IronCore.1.0.5\lib\IronSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="IronSharp.IronMQ">
-      <HintPath>..\packages\Iron.IronMQ.3.0.7-on-premise\lib\IronSharp.IronMQ.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSharp.IronWorker">
-      <HintPath>..\packages\Iron.IronWorker.1.0.2\lib\IronSharp.IronWorker.dll</HintPath>
+      <HintPath>..\packages\Iron.IronMQ.1.0.5\lib\IronSharp.IronMQ.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>

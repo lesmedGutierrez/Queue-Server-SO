@@ -20,18 +20,27 @@ namespace Rabbitmq
             // =========================================================
 
             IronMqRestClient ironMq = IronSharp.IronMQ.Client.New();
+
+            IronClientConfig config = new IronClientConfig();
+            config.Token = "D4YXJjgT6sldvBcpOvwcCuybmuY";
+            config.ProjectId = "5505e6df2d0412000600001c";
+
+            ironMq.Config.Token = config.Token;
+            ironMq.Config.ProjectId = config.ProjectId;
+
             
-
-
             // Get a Queue object
             QueueClient queue = ironMq.Queue("test-queue-lesmed");
 
             QueueInfo info = queue.Info();
+            info = new QueueInfo();
+                        
 
             Console.WriteLine(info.Inspect());
 
             // Put a message on the queue
-            string messageId = queue.Post("hello world!");
+            string messageId;
+            messageId = @queue.Post("hello world!");
 
             Console.WriteLine(messageId);
 
@@ -80,7 +89,6 @@ namespace Rabbitmq
                 Console.WriteLine(next.Delete());
             }
         }
-
 
     }
 }
