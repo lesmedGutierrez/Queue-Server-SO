@@ -26,6 +26,7 @@ namespace Rabbitmq
         public Form1()
         {
             InitializeComponent();
+            RabbitMQ.Checked = true;
 
         }
 
@@ -52,12 +53,19 @@ namespace Rabbitmq
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (RabbitMQ.Checked)
+            {
+                Receiving worker = new Receiving();
+                worker.num = num;
+                Thread newThread = new Thread(worker.Consumir);
+                newThread.Start();
+                num++;
+            }
+            else
+            {
+
+            }
             
-            Receiving worker = new Receiving();
-            worker.num = num;
-            Thread newThread = new Thread(worker.Consumir);
-            newThread.Start();
-            num++;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

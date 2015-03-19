@@ -11,8 +11,6 @@ namespace Rabbitmq
     class IronMQClass
     {
 
-
-
         public void Producir()
         {
             // =========================================================
@@ -88,6 +86,12 @@ namespace Rabbitmq
                 Console.WriteLine(next.Inspect());
                 Console.WriteLine(next.Delete());
             }
+        }
+        public void recibir()
+        {
+
+
+
         }
 
     }
