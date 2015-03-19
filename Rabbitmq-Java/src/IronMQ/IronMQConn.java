@@ -15,23 +15,22 @@ import java.util.logging.Logger;
  * and open the template in the editor.
  */
 
-import Conexion.SQL_Server;
 /**
  *
  * @author Lesmed
  */
-public class IronQMConn {
+public class IronMQConn {
     
-    SQL_Server sqlserver = new SQL_Server();
+  
     
     
     //public void main(String[] args){
     public void producir(int ciclos){
         String project = "5505e6df2d0412000600001c";
-        String token = "D4YXJjgT6sldvBcpOvwcCuybmuY";
+        String token = "D4YXJjgT6sldvBcpOcCuybmuY";
         
         Client client = new Client(project, token, Cloud.ironAWSUSEast);
-        Queue queue = client.queue("test-queue");
+        Queue queue = client.queue("test-queue-lesmed");
 
         try {
             for (int i = 0; i < ciclos; i++) {
@@ -45,9 +44,10 @@ public class IronQMConn {
             }
             
         } catch (IOException ex) {
-            Logger.getLogger(IronQMConn.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(IronMQConn.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Hubo error 1");
         }
-        sqlserver.conectar();
+        //sqlserver.conectar();
 
        
 

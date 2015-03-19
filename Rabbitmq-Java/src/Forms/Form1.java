@@ -1,5 +1,5 @@
 package Forms;
-import IronMQ.IronQMConn;
+import IronMQ.IronMQConn;
 import rabbitmq.*;
 
 /*
@@ -131,7 +131,7 @@ public class Form1 extends javax.swing.JFrame {
         }
         else{
             
-            IronQMConn iron =  new IronQMConn();
+            IronMQConn iron =  new IronMQConn();
             
             iron.producir(num);
             
