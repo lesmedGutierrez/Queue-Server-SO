@@ -43,7 +43,7 @@ namespace Rabbitmq
             }
             else
             {
-                Thread newThread = new Thread(() => ironmq.Producir());
+                Thread newThread = new Thread(() => ironmq.Producir(num));
                 newThread.Start();
 
             }
