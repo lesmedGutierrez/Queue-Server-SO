@@ -82,3 +82,5 @@ E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.csproj.GenerateResource.Cache
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.exe
 E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\obj\Debug\Rabbitmq.pdb
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronWorker.dll
+E:\Usuarios\Lesmed\Documents\GitHub\Queue Servers\Rabbitmq-c#\Rabbitmq\bin\Debug\IronSharp.IronWorker.pdb

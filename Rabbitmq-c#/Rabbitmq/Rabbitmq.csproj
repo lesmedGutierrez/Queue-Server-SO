@@ -44,6 +44,9 @@
     <Reference Include="IronSharp.IronMQ">
       <HintPath>..\packages\Iron.IronMQ.1.0.5\lib\IronSharp.IronMQ.dll</HintPath>
     </Reference>
+    <Reference Include="IronSharp.IronWorker">
+      <HintPath>..\packages\Iron.IronWorker.1.0.2\lib\IronSharp.IronWorker.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>

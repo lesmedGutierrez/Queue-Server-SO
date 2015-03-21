@@ -23,6 +23,7 @@ namespace Rabbitmq
         private BackgroundWorker bw = new BackgroundWorker();
         private BackgroundWorker bw2 = new BackgroundWorker();
         IronMQClass ironmq = new IronMQClass();
+        bool threads = false;
         public Form1()
         {
             InitializeComponent();
@@ -63,6 +64,20 @@ namespace Rabbitmq
             }
             else
             {
+
+                while (true)
+                {
+
+                    if (!threads) break;
+
+                    Thread newThread = new Thread(ironmq.recibir);
+                    newThread.Start();
+
+                }
+
+
+                
+                
 
             }
             
