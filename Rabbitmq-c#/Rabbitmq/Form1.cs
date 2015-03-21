@@ -64,16 +64,29 @@ namespace Rabbitmq
             }
             else
             {
-
-                while (true)
+                List<Thread> threadslis = new List<Thread>();
+                
+                int numeroThreads = 3;
+                for (int i = 0; i < numeroThreads; i++)
                 {
-
-                    if (!threads) break;
-
                     Thread newThread = new Thread(ironmq.recibir);
-                    newThread.Start();
-
+                    threadslis.Add(newThread);
                 }
+
+
+                for (int i = 0; i < threadslis.Count; i++)
+                {
+                    if (threads)
+                    {
+
+
+
+                        
+                    }
+
+                    
+
+                 }
 
 
                 
