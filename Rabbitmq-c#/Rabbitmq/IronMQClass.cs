@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using IronSharp.IronWorker;
+using System.Threading;
 
 namespace Rabbitmq
 {
@@ -44,14 +45,16 @@ namespace Rabbitmq
 
 
                 messageId = queue.Post(jsonified);
-                
+
             }
-            
+
         }
         public void recibir()
-
         {
-            
+            Random rnd = new Random();
+            int numrnd = rnd.Next(500, 3000);
+            Thread.Sleep(numrnd);
+
             IronMqRestClient ironMq = IronSharp.IronMQ.Client.New();
 
             ironMq.Config.Token = this.token;
@@ -65,19 +68,15 @@ namespace Rabbitmq
                 DefaultMensaje message = JsonConvert.DeserializeObject<DefaultMensaje>(body);
                 message.insertarMsj();
                 bool deleted = msg.Delete();
-                Console.WriteLine("Deleted = {0}", deleted);                
+                Console.WriteLine("Deleted = {0}", deleted);
             }
-            
-            
 
-           
+
+
+
 
 
         }
-
-    }
-    class workerMQ : IronWorkerRestClient
-    {
 
     }
 }

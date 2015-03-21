@@ -64,6 +64,14 @@ namespace Rabbitmq
             }
             else
             {
+                if (threads)
+                {
+                    threads = false;
+                }
+                else
+                {
+                    threads = true;
+                }
                 List<Thread> threadslis = new List<Thread>();
                 
                 int numeroThreads = 3;
@@ -79,11 +87,21 @@ namespace Rabbitmq
                     if (threads)
                     {
 
+                        Thread t = threadslis[i];
+                        if (!t.IsAlive)
+                        {
+                            t = new Thread(ironmq.recibir);
+                            t.Start();
 
+                        }
 
                         
                     }
 
+                    if (i == threadslis.Count-1)
+                    {
+                        i = 0;
+                    }
                     
 
                  }
