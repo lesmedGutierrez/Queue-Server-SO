@@ -4,29 +4,85 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace Rabbitmq
+namespace MyMQServer
 {
-    class MyMQ
+    class Server
     {
-        public void Listen(int backlog)
-        {
-            int port = 13000;
-            // create the socket
-            Socket listenSocket = new Socket(AddressFamily.InterNetwork,
-                                             SocketType.Stream,
-                                             ProtocolType.Tcp);
-            // bind the listening socket to the port
-            IPAddress hostIP = (Dns.Resolve(IPAddress.Any.ToString())).AddressList[0];
-            IPEndPoint ep = new IPEndPoint(hostIP, port);
-            listenSocket.Bind(ep);
+        bool threads = true;
 
-            // start listening
-            listenSocket.Listen(backlog);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void run()
+        {
+
+
+
+            if (threads)
+            {
+                threads = false;
+            }
+            else
+            {
+                threads = true;
+            }
+            List<Thread> threadslis = new List<Thread>();
+
+            int numeroThreads = 3;
+            for (int i = 0; i < numeroThreads; i++)
+            {
+                Thread newThread = new Thread(this.Listen);
+                threadslis.Add(newThread);
+            }
+
+
+            for (int i = 0; i < threadslis.Count; i++)
+            {
+                if (threads)
+                {
+
+                    Thread t = threadslis[i];
+                    if (!t.IsAlive)
+                    {
+                        t = new Thread(this.Listen);
+                        t.Start();
+
+                    }
+
+
+                }
+
+                if (i == threadslis.Count - 1)
+                {
+                    i = 0;
+                }
+
+
+            }
+
+
+
+
+
         }
 
-        public void listenTCP()
+
+        public void Listen()
         {
 
             TcpListener server = null;
@@ -55,9 +111,7 @@ namespace Rabbitmq
                     // You could also user server.AcceptSocket() here.
                     TcpClient client = server.AcceptTcpClient();
                     Console.WriteLine("Connected!");
-
                     data = null;
-
                     // Get a stream object for reading and writing
                     NetworkStream stream = client.GetStream();
 
@@ -79,7 +133,6 @@ namespace Rabbitmq
                         stream.Write(msg, 0, msg.Length);
                         Console.WriteLine("Sent: {0}", data);
                     }
-
                     // Shutdown and end connection
                     client.Close();
                 }
@@ -93,21 +146,15 @@ namespace Rabbitmq
                 // Stop listening for new clients.
                 server.Stop();
             }
-
-
             Console.WriteLine("\nHit enter to continue...");
             Console.Read();
 
-
         }
-        public void sender()
-        {
 
 
 
 
 
-        }
 
 
     }
