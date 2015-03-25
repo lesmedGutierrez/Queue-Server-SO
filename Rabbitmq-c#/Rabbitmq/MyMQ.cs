@@ -10,21 +10,7 @@ namespace Rabbitmq
 {
     class MyMQ
     {
-        public void Listen(int backlog)
-        {
-            int port = 13000;
-            // create the socket
-            Socket listenSocket = new Socket(AddressFamily.InterNetwork,
-                                             SocketType.Stream,
-                                             ProtocolType.Tcp);
-            // bind the listening socket to the port
-            IPAddress hostIP = (Dns.Resolve(IPAddress.Any.ToString())).AddressList[0];
-            IPEndPoint ep = new IPEndPoint(hostIP, port);
-            listenSocket.Bind(ep);
-
-            // start listening
-            listenSocket.Listen(backlog);
-        }
+  
 
         public void listenTCP()
         {
@@ -76,7 +62,7 @@ namespace Rabbitmq
                         byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
 
                         // Send back a response.
-                        stream.Write(msg, 0, msg.Length);
+                        //stream.Write(msg, 0, msg.Length);
                         Console.WriteLine("Sent: {0}", data);
                     }
 

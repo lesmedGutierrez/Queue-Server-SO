@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace MyMQServer
 {
-    class Queue
+    class MyQueue
     {
 
-        Message message;
-        
-        
-        
+        Queue<Message> queue = new Queue<Message>();
+
+        public void Add(Message message)
+        {
+            queue.Enqueue(message);
+        }
+        public void Add(string message)
+        {
+            Message msg = new Message();
+            msg.mensage = message;
+            queue.Enqueue(msg);
+        }
+        public string Get()
+        {
+            if (queue.Count > 0)
+            {
+                Message message = queue.Dequeue();
+
+                return message.mensage;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
     }
 }

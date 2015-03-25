@@ -10,7 +10,8 @@ namespace MyMQServer
     {
 
 
-        String mensage;
+        public string mensage { get; set; }
+        
 
 
     }
