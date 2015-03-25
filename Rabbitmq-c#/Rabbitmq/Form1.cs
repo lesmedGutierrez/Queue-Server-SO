@@ -24,6 +24,8 @@ namespace Rabbitmq
         private BackgroundWorker bw2 = new BackgroundWorker();
         IronMQClass ironmq = new IronMQClass();
         bool threads = false;
+
+
         public Form1()
         {
             InitializeComponent();

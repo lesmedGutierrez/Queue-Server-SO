@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="DefaultMensaje.cs" />
     <Compile Include="IronMQClass.cs" />
+    <Compile Include="MyMQ.cs" />
     <Compile Include="Producir.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

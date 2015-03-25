@@ -35,12 +35,7 @@ public class IronMQConn {
         try {
             for (int i = 0; i < ciclos; i++) {
                 // Put a message on the queue
-                queue.push("Hello, world!"); // Get a message
-                Message msg = queue.get();
-
-                // Delete the message
-                queue.deleteMessage(msg);
-                
+                queue.push("Hello, world!"); // Get a message               
             }
             
         } catch (IOException ex) {

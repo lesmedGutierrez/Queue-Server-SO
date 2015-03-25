@@ -17,6 +17,14 @@ namespace Rabbitmq
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            MyMQ myMQ = new MyMQ();
+
+
+
+
+
+            myMQ.listenTCP();
+
             Application.Run(new Form1());
         }
     }
