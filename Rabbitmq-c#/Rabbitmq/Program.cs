@@ -19,11 +19,10 @@ namespace Rabbitmq
             Application.SetCompatibleTextRenderingDefault(false);
             MyMQ myMQ = new MyMQ();
 
+            
+            
 
-
-
-
-            myMQ.listenTCP();
+            //myMQ.listenTCP();
 
             Application.Run(new Form1());
         }

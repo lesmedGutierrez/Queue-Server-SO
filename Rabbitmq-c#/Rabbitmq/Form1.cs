@@ -30,6 +30,8 @@ namespace Rabbitmq
         {
             InitializeComponent();
             RabbitMQ.Checked = true;
+            this.JSON.Checked = true;
+            
 
         }
 
@@ -48,8 +50,8 @@ namespace Rabbitmq
             {
                 Thread newThread = new Thread(() => ironmq.Producir(num));
                 newThread.Start();
-
             }
+
 
             
         }
@@ -127,6 +129,19 @@ namespace Rabbitmq
 
         private void button3_Click(object sender, EventArgs e)
         {
+        }
+
+        private void MyMQ_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MyMQ.Checked)
+            {
+                this.panel1.Visible = true;
+                
+            }
+            else
+            {
+                this.panel1.Visible = false;
+            }
         }
     }
 }
