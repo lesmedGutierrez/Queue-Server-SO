@@ -87,7 +87,7 @@ namespace MyMQServer
                     NetworkStream stream = client.GetStream();
 
                     int i = stream.Read(bytes, 0, bytes.Length) ;
-
+                    string algo = "Hola mundo";
                     if (i == 0)
                     {
                         data = this.sendData();
@@ -103,15 +103,11 @@ namespace MyMQServer
                         // Loop to receive all the data sent by the client.
                         while (i != 0)
                         {
-                            // Translate data bytes to a ASCII string.
-                            data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
-                            Console.WriteLine("Received: {0}", data);
+                            string msg = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+                            Console.WriteLine("Received: {0}", msg);
 
-                            // Process the data sent by the client.
-                            //data = data.ToUpper();
-
-                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
-
+                            queue.Add(msg);
+                            i = 0;
 
                         }
                     }

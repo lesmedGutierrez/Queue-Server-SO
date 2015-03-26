@@ -23,6 +23,7 @@ namespace Rabbitmq
         private BackgroundWorker bw = new BackgroundWorker();
         private BackgroundWorker bw2 = new BackgroundWorker();
         IronMQClass ironmq = new IronMQClass();
+        MyMQ mymq = new MyMQ();
         bool threads = false;
 
 
@@ -46,10 +47,16 @@ namespace Rabbitmq
                 Thread newThread = new Thread(() => Producir.ProducirInfo(num));
                 newThread.Start();
             }
-            else
+            else if (IronMQ.Checked)
             {
                 Thread newThread = new Thread(() => ironmq.Producir(num));
                 newThread.Start();
+            }
+            else
+            {
+                Thread newThread = new Thread(() => mymq.Producir(num));
+                newThread.Start();
+
             }
 
 
@@ -66,7 +73,7 @@ namespace Rabbitmq
                 newThread.Start();
                 num++;
             }
-            else
+            else if (IronMQ.Checked)
             {
                 if (threads)
                 {
@@ -76,27 +83,22 @@ namespace Rabbitmq
                 {
                     threads = true;
                 }
-                List<Thread> threadslis = new List<Thread>();
-                
+                List<Thread> threadslis = new List<Thread>();               
                 int numeroThreads = 3;
                 for (int i = 0; i < numeroThreads; i++)
                 {
                     Thread newThread = new Thread(ironmq.recibir);
                     threadslis.Add(newThread);
                 }
-
-
                 for (int i = 0; i < threadslis.Count; i++)
                 {
                     if (threads)
                     {
-
                         Thread t = threadslis[i];
                         if (!t.IsAlive)
                         {
                             t = new Thread(ironmq.recibir);
                             t.Start();
-
                         }
 
                         
@@ -106,13 +108,52 @@ namespace Rabbitmq
                     {
                         i = 0;
                     }
-                    
-
                  }
+            }
+            else
+            {
+                mymq.recibir();
 
 
-                
-                
+                //if (threads)
+                //{
+                //    threads = false;
+                //}
+                //else
+                //{
+                //    threads = true;
+                //}
+                //List<Thread> threadslis = new List<Thread>();
+                //int numeroThreads = 3;
+                //for (int i = 0; i < numeroThreads; i++)
+                //{
+                //    Thread newThread = new Thread(mymq.recibir);
+                //    threadslis.Add(newThread);
+                //}
+                //for (int i = 0; i < threadslis.Count; i++)
+                //{
+                //    if (threads)
+                //    {
+                //        Thread t = threadslis[i];
+                //        if (!t.IsAlive)
+                //        {
+                //            t = new Thread(mymq.recibir);
+                //            t.Start();
+                //        }
+
+
+                //    }
+
+                //    if (i == threadslis.Count - 1)
+                //    {
+                //        i = 0;
+                //    }
+                //}
+
+
+
+
+
 
             }
             
