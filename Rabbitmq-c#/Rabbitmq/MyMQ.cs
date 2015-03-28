@@ -31,7 +31,7 @@ namespace Rabbitmq
                     NetworkStream stream = client.GetStream();
                     // Send the message to the connected TcpServer. 
                     stream.Write(data, 0, data.Length);
-                    Console.WriteLine("Sent: {0} ,{1}", data ,i);
+                    Console.WriteLine("Sent: {0} ,{1}", jsonified ,i);
                     stream.Close();
                     client.Close();
                 }
