@@ -15,60 +15,64 @@ namespace MyMQServer
         private static Semaphore _pool;
 
         MyQueue queue = new MyQueue();
+        NetworkStream stream;
+
+        public Server()
+        {
+
+            queue.Add("Hola mundo");
+            queue.Add("Hola mundo");
+            queue.Add("Hola mundo");
+
+
+        }
 
 
         public void run()
         {
+            this.Listen();
 
-            List<Thread> threadslis = new List<Thread>();
+            //List<Thread> threadslis = new List<Thread>();
+            //int numeroThreads = 1;
+            //for (int i = 0; i < numeroThreads; i++)
+            //{
+            //    Thread newThread = new Thread(this.Listen);
+            //    threadslis.Add(newThread);
+            //}
+            //for (int i = 0; i < threadslis.Count; i++)
+            //{
+            //    if (threads)
+            //    {
+            //        Thread t = threadslis[i];
+            //        if (!t.IsAlive)
+            //        {
+            //            t = new Thread(this.Listen);
+            //            t.Start();
+            //        }
+            //    }
 
-            int numeroThreads = 1;
-            for (int i = 0; i < numeroThreads; i++)
-            {
-                Thread newThread = new Thread(this.Listen);
-                threadslis.Add(newThread);
-            }
-
-
-            for (int i = 0; i < threadslis.Count; i++)
-            {
-                if (threads)
-                {
-
-                    Thread t = threadslis[i];
-                    if (!t.IsAlive)
-                    {
-                        t = new Thread(this.Listen);
-                        t.Start();
-
-                    }
-
-
-                }
-
-                if (i == threadslis.Count - 1)
-                {
-                    i = 0;
-                }
-
-
-            }
-
+            //    if (i == threadslis.Count - 1)
+            //    {
+            //        i = 0;
+            //    }
+            //}
         }
 
 
         public void Listen()
         {
             TcpListener server = null;
+            Int32 port = 13000;
+            IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+
             try
             {
                 // Set the TcpListener on port 13000.
-                Int32 port = 13000;
-                IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+                
                 // TcpListener server = new TcpListener(port);
                 server = new TcpListener(localAddr, port);
                 // Start listening for client requests.
-                server.Start();
+                
 
                 // Buffer for reading data
                 Byte[] bytes = new Byte[2048];
@@ -76,6 +80,7 @@ namespace MyMQServer
                 // Enter the listening loop.
                 while (true)
                 {
+                    server.Start();
                     Console.Write("Waiting for a connection... ");
 
                     // Perform a blocking call to accept requests.
@@ -84,7 +89,8 @@ namespace MyMQServer
                     Console.WriteLine("Connected!");
                     data = null;
                     // Get a stream object for reading and writing
-                    NetworkStream stream = client.GetStream();
+                    //NetworkStream stream = client.GetStream();
+                    stream = client.GetStream();
 
                     int i = stream.Read(bytes, 0, bytes.Length) ;
                     string algo = "Hola mundo";
@@ -112,7 +118,10 @@ namespace MyMQServer
                         }
                     }
                     // Shutdown and end connection
+                    //stream.Close();
                     client.Close();
+                    server.Stop();
+                    
                 }
             }
             catch (SocketException e)
@@ -122,7 +131,7 @@ namespace MyMQServer
             finally
             {
                 // Stop listening for new clients.
-                //server.Stop();
+                server.Stop();
             }
             Console.WriteLine("\nHit enter to continue...");
             Console.Read();
