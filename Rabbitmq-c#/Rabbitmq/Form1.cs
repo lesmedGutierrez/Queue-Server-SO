@@ -112,7 +112,16 @@ namespace Rabbitmq
             }
             else
             {
-                mymq.recibir();
+                int num = 1;
+                if (!textBox1.Text.Equals(""))
+                    num = int.Parse(textBox1.Text);
+
+
+                for (int i = 0; i < num; i++)
+                {
+                    mymq.recibir();
+                    
+                }
 
 
                 //if (threads)
@@ -124,7 +133,7 @@ namespace Rabbitmq
                 //    threads = true;
                 //}
                 //List<Thread> threadslis = new List<Thread>();
-                //int numeroThreads = 3;
+                //int numeroThreads = num;
                 //for (int i = 0; i < numeroThreads; i++)
                 //{
                 //    Thread newThread = new Thread(mymq.recibir);
@@ -144,10 +153,10 @@ namespace Rabbitmq
 
                 //    }
 
-                //    if (i == threadslis.Count - 1)
-                //    {
-                //        i = 0;
-                //    }
+                //    //if (i == threadslis.Count - 1)
+                //    //{
+                //    //    i = 0;
+                //    //}
                 //}
 
 

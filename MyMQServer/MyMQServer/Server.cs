@@ -20,9 +20,9 @@ namespace MyMQServer
         public Server()
         {
 
-            queue.Add("Hola mundo");
-            queue.Add("Hola mundo");
-            queue.Add("Hola mundo");
+            //queue.Add("Hola mundo");
+            //queue.Add("Hola mundo");
+            //queue.Add("Hola mundo");
 
 
         }
@@ -30,7 +30,8 @@ namespace MyMQServer
 
         public void run()
         {
-            this.Listen();
+            //this.Listen();
+            this.createListener();
 
             //List<Thread> threadslis = new List<Thread>();
             //int numeroThreads = 1;
@@ -151,5 +152,80 @@ namespace MyMQServer
             return msg;
         }
 
+        public void createListener()
+        {
+            string output;
+            int port = 13000;
+            TcpListener tcpListener = null;
+            //IPAddress ipAddress = IPAddress.Any;
+            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+            try
+            {
+                tcpListener = new TcpListener(ipAddress, port);
+                tcpListener.Start();
+                output = "Waiting for a connection...";
+                Console.WriteLine(output);
+            }
+            catch (Exception e)
+            {
+                output = "Error: " + e.ToString();
+                Console.WriteLine(output);
+            }
+            while (true)
+            {
+                Thread.Sleep(10);
+                TcpClient tcpClient = tcpListener.AcceptTcpClient();
+                byte[] bytes = new byte[2048];
+                NetworkStream stream = tcpClient.GetStream();
+                stream.Read(bytes, 0, bytes.Length);
+                SocketHelper helper = new SocketHelper();
+                helper.processMsg(tcpClient, stream, bytes, this);
+            }
+        }
+
+        class SocketHelper
+        {
+            TcpClient mscClient;
+            string mstrMessage;
+            string mstrResponse;
+            byte[] bytesSent;
+
+            public void processMsg(TcpClient client, NetworkStream stream, byte[] bytesReceived, Server server)
+            {
+                mstrMessage = Encoding.ASCII.GetString(bytesReceived, 0, bytesReceived.Length);
+                mscClient = client;
+                if (mstrMessage.Length > 0)
+                {
+                    Console.WriteLine("Recibido: {0}", mstrMessage);
+                    mstrResponse = mstrMessage;
+                    char c = mstrMessage[0];
+                    if (c == '1')
+                    {
+                        mstrResponse = server.sendData();
+                    }
+                    else
+                    {
+                        server.queue.Add(mstrMessage);
+                    }
+                }
+                    
+                
+                else
+                {
+                    mstrResponse = "You have sent blank message";
+                }
+                if (mstrResponse!=null)
+                {
+                    bytesSent = Encoding.ASCII.GetBytes(mstrResponse);
+                    stream.Write(bytesSent, 0, bytesSent.Length);
+                }
+                else
+                {
+                    bytesSent = Encoding.ASCII.GetBytes(string.Empty);
+                    stream.Write(bytesSent, 0, bytesSent.Length);
+                }
+            }
+
+        }
     }
 }
