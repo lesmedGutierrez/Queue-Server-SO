@@ -83,7 +83,7 @@ namespace Rabbitmq
                 {
                     threads = true;
                 }
-                List<Thread> threadslis = new List<Thread>();               
+                List<Thread> threadslis = new List<Thread>();
                 int numeroThreads = 3;
                 for (int i = 0; i < numeroThreads; i++)
                 {
@@ -101,71 +101,69 @@ namespace Rabbitmq
                             t.Start();
                         }
 
-                        
+
                     }
 
-                    if (i == threadslis.Count-1)
+                    if (i == threadslis.Count - 1)
                     {
                         i = 0;
                     }
-                 }
+                }
             }
             else
             {
-                int num = 1;
-                if (!textBox1.Text.Equals(""))
-                    num = int.Parse(textBox1.Text);
-
-
-                for (int i = 0; i < num; i++)
+                try
                 {
-                    mymq.recibir();
-                    
+                    //int num = 1;
+                    //if (!textBox1.Text.Equals(""))
+                    //    num = int.Parse(textBox1.Text);
+
+
+                    //for (int i = 0; i < num; i++)
+                    //{
+                    //    mymq.recibir();
+
+                    //}
+
+
+                    if (threads)
+                    {
+                        threads = false;
+                    }
+                    else
+                    {
+                        threads = true;
+                    }
+                    List<Thread> threadslis = new List<Thread>();
+                    int numeroThreads = 3;
+                    for (int i = 0; i < numeroThreads; i++)
+                    {
+                        Thread newThread = new Thread(mymq.recibir);
+                        threadslis.Add(newThread);
+                    }
+                    for (int i = 0; i < threadslis.Count; i++)
+                    {
+                        if (threads)
+                        {
+                            Thread t = threadslis[i];
+                            if (!t.IsAlive)
+                            {
+                                t = new Thread(mymq.recibir);
+                                t.Start();
+                            }
+
+
+                        }
+
+                        if (i == threadslis.Count - 1)
+                        {
+                            i = 0;
+                        }
+                    }
+
                 }
-
-
-                //if (threads)
-                //{
-                //    threads = false;
-                //}
-                //else
-                //{
-                //    threads = true;
-                //}
-                //List<Thread> threadslis = new List<Thread>();
-                //int numeroThreads = num;
-                //for (int i = 0; i < numeroThreads; i++)
-                //{
-                //    Thread newThread = new Thread(mymq.recibir);
-                //    threadslis.Add(newThread);
-                //}
-                //for (int i = 0; i < threadslis.Count; i++)
-                //{
-                //    if (threads)
-                //    {
-                //        Thread t = threadslis[i];
-                //        if (!t.IsAlive)
-                //        {
-                //            t = new Thread(mymq.recibir);
-                //            t.Start();
-                //        }
-
-
-                //    }
-
-                //    //if (i == threadslis.Count - 1)
-                //    //{
-                //    //    i = 0;
-                //    //}
-                //}
-
-
-
-
-
-
+                catch (Exception e1) { }
             }
-            
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
