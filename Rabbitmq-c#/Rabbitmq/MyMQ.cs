@@ -70,7 +70,7 @@ namespace Rabbitmq
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
 
 
-                Console.WriteLine("Received: {0}", responseData);
+                //Console.WriteLine("Received: {0}", responseData);
                 // Close everything.
                 stream.Close();
                 client.Close();

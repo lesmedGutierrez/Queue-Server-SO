@@ -180,6 +180,7 @@ namespace MyMQServer
                 stream.Read(bytes, 0, bytes.Length);
                 SocketHelper helper = new SocketHelper();
                 helper.processMsg(tcpClient, stream, bytes, this);
+                
             }
         }
 
@@ -196,7 +197,9 @@ namespace MyMQServer
                 mscClient = client;
                 if (mstrMessage.Length > 0)
                 {
-                    Console.WriteLine("Recibido: {0}", mstrMessage);
+
+                    string temporal = System.Text.Encoding.ASCII.GetString(bytesReceived, 0, bytesReceived.Length);
+                    Console.WriteLine("Recibido: {0}", temporal);
                     mstrResponse = mstrMessage;
                     char c = mstrMessage[0];
                     if (c == '1')
