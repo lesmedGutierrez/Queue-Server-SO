@@ -201,7 +201,8 @@ namespace MyMQServer
                 {
 
                     string temporal = System.Text.Encoding.ASCII.GetString(bytesReceived, 0, bytesReceived.Length);
-                    Console.WriteLine("Recibido: {0}", temporal);
+                    char[] removibles = { '\0' };
+                    Console.WriteLine("Recibido: {0}", temporal.TrimEnd(removibles));
                     mstrResponse = mstrMessage;
                     char c = mstrMessage[0];
                     if (c == '1')
