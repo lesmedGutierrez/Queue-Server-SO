@@ -124,8 +124,6 @@ namespace Rabbitmq
                     //    mymq.recibir();
 
                     //}
-
-
                     if (threads)
                     {
                         threads = false;
@@ -151,8 +149,6 @@ namespace Rabbitmq
                                 t = new Thread(mymq.recibir);
                                 t.Start();
                             }
-
-
                         }
 
                         if (i == threadslis.Count - 1)
@@ -160,7 +156,6 @@ namespace Rabbitmq
                             i = 0;
                         }
                     }
-
                 }
                 catch (Exception e1) { }
             }

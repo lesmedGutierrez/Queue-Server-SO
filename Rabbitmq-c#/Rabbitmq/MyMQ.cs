@@ -83,6 +83,10 @@ namespace Rabbitmq
             {
                 Console.WriteLine("SocketException: {0}", e);
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: {0}", e);
+            }
             Console.WriteLine("\n Press Enter to continue...");
             //Console.Read();
             Random rnd = new Random();
