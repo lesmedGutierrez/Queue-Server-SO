@@ -24,6 +24,7 @@ namespace Rabbitmq
                 {
                     Int32 port = 13000;
                     TcpClient client = new TcpClient(server, port);
+                    
 
                     DefaultMensaje msg = new DefaultMensaje("MyMQ_C#", "Persona " + i, "ID" + i);
                     String jsonified = JsonConvert.SerializeObject(msg);

@@ -64,7 +64,7 @@ namespace MyMQServer
         {
             TcpListener server = null;
             Int32 port = 13000;
-            string host = "127.0.0.1";
+            string host = "172.24.28.147";
 
             IPAddress localAddr = IPAddress.Parse(host);
 
@@ -158,9 +158,10 @@ namespace MyMQServer
         {
             string output;
             int port = 13000;
+            string host = "172.24.28.147";
             TcpListener tcpListener = null;
             //IPAddress ipAddress = IPAddress.Any;
-            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+            IPAddress ipAddress = IPAddress.Parse(host);
             try
             {
                 tcpListener = new TcpListener(ipAddress, port);
