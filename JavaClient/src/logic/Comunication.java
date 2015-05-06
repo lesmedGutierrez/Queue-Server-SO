@@ -6,6 +6,7 @@
 package logic;
     import java.io.*;
     import java.net.*;
+    import com.google.gson.Gson;
 /**
  *
  * @author Lesmed®
