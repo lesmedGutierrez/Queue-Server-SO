@@ -18,24 +18,20 @@ public class JavaClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        
-        
         System.out.println("Hola me estoy ejecutando");
         
         readProperties rp = new readProperties();
         
-        rp.setPropertie("host", "172.24.28.147");
-        rp.setPropertie("port", "13000");
-        
+//        rp.setPropertie("host", "172.24.28.147");
+//        rp.setPropertie("port", "13000");
+//        rp.setPropertie("ciclos", "12");
         
         
         String host = rp.getPropertie("host");
         int port = Integer.parseInt(rp.getPropertie("port"));
+        int ciclos = Integer.parseInt(rp.getPropertie("ciclos"));
         
         MyMQ mymq = new MyMQ(host, port);
-        int ciclos =12;
         
         mymq.Producir(ciclos);
         

@@ -9,11 +9,11 @@ import java.io.InputStream;
 import java.util.Properties;
  
 public class readProperties {
-    
+    Properties prop = new Properties();
     
   public void setPropertie(String name,String propertie) {
  
-	Properties prop = new Properties();
+	
 	OutputStream output = null;
  
 	try {
