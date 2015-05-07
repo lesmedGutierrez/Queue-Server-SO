@@ -5,9 +5,8 @@
  */
 package javaclient;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import logic.Comunication;
+
+import logic.MyMQ;
 
 /**
  *
@@ -26,7 +25,8 @@ public class JavaClient {
         System.out.println("Hola me estoy ejecutando");
         
         readProperties rp = new readProperties();
-        rp.setPropertie("host", "127.0.0.1");
+        
+        rp.setPropertie("host", "172.24.28.147");
         rp.setPropertie("port", "13000");
         
         
@@ -34,12 +34,10 @@ public class JavaClient {
         String host = rp.getPropertie("host");
         int port = Integer.parseInt(rp.getPropertie("port"));
         
-        Comunication comunication = new Comunication();
-        try {
-            comunication.producir(host, port);
-        } catch (Exception ex) {
-            Logger.getLogger(JavaClient.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        MyMQ mymq = new MyMQ(host, port);
+        int ciclos =12;
+        
+        mymq.Producir(ciclos);
         
         
     }

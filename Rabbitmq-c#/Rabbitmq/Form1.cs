@@ -84,7 +84,7 @@ namespace Rabbitmq
                     threads = true;
                 }
                 List<Thread> threadslis = new List<Thread>();
-                int numeroThreads = 3;
+                int numeroThreads = 1;
                 for (int i = 0; i < numeroThreads; i++)
                 {
                     Thread newThread = new Thread(ironmq.recibir);
@@ -133,7 +133,7 @@ namespace Rabbitmq
                         threads = true;
                     }
                     List<Thread> threadslis = new List<Thread>();
-                    int numeroThreads = 3;
+                    int numeroThreads = 1;
                     for (int i = 0; i < numeroThreads; i++)
                     {
                         Thread newThread = new Thread(mymq.recibir);
@@ -178,7 +178,7 @@ namespace Rabbitmq
         {
             if (MyMQ.Checked)
             {
-                this.panel1.Visible = true;
+                this.panel1.Visible = false;
                 
             }
             else
