@@ -31,6 +31,10 @@ public class JavaClient {
         int port = Integer.parseInt(rp.getPropertie("port"));
         int ciclos = Integer.parseInt(rp.getPropertie("ciclos"));
         
+        
+        System.out.println("port {0}" + port);
+        System.out.println("host" + host);
+        
         MyMQ mymq = new MyMQ(host, port);
         
         mymq.Producir(ciclos);

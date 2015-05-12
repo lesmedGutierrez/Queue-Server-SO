@@ -159,8 +159,8 @@ namespace MyMQServer
             string output;
             int port = 13000;
             TcpListener tcpListener = null;
-            //IPAddress ipAddress = IPAddress.Any;
-            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+            IPAddress ipAddress = IPAddress.Any;
+            //IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
             try
             {
                 tcpListener = new TcpListener(ipAddress, port);
