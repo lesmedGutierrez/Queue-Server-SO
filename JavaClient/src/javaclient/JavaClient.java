@@ -23,7 +23,6 @@ public class JavaClient {
         while (true){
             System.out.println("Producir: P / Recibir: R");
             String opcion;
-            
             Scanner scanIn = new Scanner(System.in);
             opcion = scanIn.nextLine();
             if (opcion.equalsIgnoreCase("s")){
@@ -33,15 +32,14 @@ public class JavaClient {
             int ciclos;
             Scanner scanInt = new Scanner(System.in);
             ciclos = scanIn.nextInt();      
-            scanIn.close();
+            //scanIn.close();
 
-            System.out.println(opcion);
-            System.out.println("Hola me estoy ejecutando");
+            //System.out.println("Hola me estoy ejecutando");
             readProperties rp = new readProperties();
 
-                    rp.setPropertie("host", "127.0.0.1");
-                    rp.setPropertie("port", "13000");
-                    rp.setPropertie("ciclos", "12");
+//                    rp.setPropertie("host", "127.0.0.1");
+//                    rp.setPropertie("port", "13000");
+//                    rp.setPropertie("ciclos", "12");
 
 
             String host = rp.getPropertie("host");
@@ -54,12 +52,12 @@ public class JavaClient {
 
             MyMQ mymq = new MyMQ(host, port);
             opcion = opcion.toLowerCase();
-            switch (opcion){
-                    case "p":
-                        mymq.Producir(ciclos);
-                    case "r":
-                        mymq.recibir(ciclos);
-            }            
+            if (opcion.equals("p")){
+                mymq.Producir(ciclos);
+            }
+            else if (opcion.equals("r")){
+                mymq.recibir(ciclos);
+            }
         }
     }
     
