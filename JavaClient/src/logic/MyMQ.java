@@ -6,6 +6,7 @@
 package logic;
 
 import com.google.gson.Gson;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,41 +25,46 @@ public class MyMQ {
         this.port = port;
     }
     public void Producir(int ciclos )
+    {
+        for (int i = 0; i < ciclos; i++)
         {
-
-            for (int i = 0; i < ciclos; i++)
+             try
             {
-                 try
-                {
-                    
+                DefaultMensaje msg = new DefaultMensaje("MyMQ_JavaProducer", "Persona " + i, "ID" + i);
+                Gson gson = new Gson();
 
-                    DefaultMensaje msg = new DefaultMensaje("MyMQ_JavaProducer", "Persona " + i, "ID" + i);
-                    Gson gson = new Gson();
-    
-                    String jsonified = gson.toJson(msg);                  
-                    
-                    communication.send(host, port, jsonified);
-                    //var data = Encoding.UTF8.GetBytes(jsonified);
+                String jsonified = gson.toJson(msg);                  
 
-                    //Console.WriteLine("Sent: {0} ,{1}", jsonified ,i);
-                   
-                } catch (Exception ex) {
-                    Logger.getLogger(MyMQ.class.getName()).log(Level.SEVERE, null, ex);
-                }
-//                catch (ArgumentNullException e)
-//                {
-//                    Console.WriteLine("ArgumentNullException: {0}", e);
-//                }
-//                catch (SocketException e)
-//                {
-//                    Console.WriteLine("SocketException: {0}", e);
-//                }
-//
-//                Console.WriteLine("\n Press Enter to continue...");
-//                Console.Read();
+                communication.send(host, port, jsonified);
+                //var data = Encoding.UTF8.GetBytes(jsonified);
 
+                //Console.WriteLine("Sent: {0} ,{1}", jsonified ,i);
+
+            } catch (Exception ex) {
+                Logger.getLogger(MyMQ.class.getName()).log(Level.SEVERE, null, ex);
             }
+
         }
+    }
+    
+    public void recibir(int ciclos){
+        
+
+        for (int i = 0; i < ciclos; i++) {
+            try {
+                communication.recieve(host, port, "1");
+            } catch (IOException ex) {
+                Logger.getLogger(MyMQ.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+    }
+        
+        
+        
+        
+        
+    
     
     
     

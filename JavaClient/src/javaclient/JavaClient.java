@@ -6,6 +6,7 @@
 package javaclient;
 
 
+import java.util.Scanner;
 import logic.MyMQ;
 
 /**
@@ -18,28 +19,54 @@ public class JavaClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hola me estoy ejecutando");
         
-        readProperties rp = new readProperties();
-        
-//        rp.setPropertie("host", "172.24.28.147");
-//        rp.setPropertie("port", "13000");
-//        rp.setPropertie("ciclos", "12");
-        
-        
-        String host = rp.getPropertie("host");
-        int port = Integer.parseInt(rp.getPropertie("port"));
-        int ciclos = Integer.parseInt(rp.getPropertie("ciclos"));
-        
-        
-        System.out.println("port {0}" + port);
-        System.out.println("host" + host);
-        
-        MyMQ mymq = new MyMQ(host, port);
-        
-        mymq.Producir(ciclos);
-        
+        while (true){
+            System.out.println("Producir: P / Recibir: R");
+            String opcion;
+            
+            Scanner scanIn = new Scanner(System.in);
+            opcion = scanIn.nextLine();
+            if (opcion.equalsIgnoreCase("s")){
+                return;
+            }
+            System.out.println("Cantidad de ciclos: ");
+            int ciclos;
+            Scanner scanInt = new Scanner(System.in);
+            ciclos = scanIn.nextInt();      
+            scanIn.close();
+
+            System.out.println(opcion);
+            System.out.println("Hola me estoy ejecutando");
+            readProperties rp = new readProperties();
+
+                    rp.setPropertie("host", "127.0.0.1");
+                    rp.setPropertie("port", "13000");
+                    rp.setPropertie("ciclos", "12");
+
+
+            String host = rp.getPropertie("host");
+            int port = Integer.parseInt(rp.getPropertie("port"));
+            //ciclos = Integer.parseInt(rp.getPropertie("ciclos"));
+
+
+            System.out.println("port {0}" + port);
+            System.out.println("host" + host);
+
+            MyMQ mymq = new MyMQ(host, port);
+            opcion = opcion.toLowerCase();
+            switch (opcion){
+                    case "p":
+                        mymq.Producir(ciclos);
+                    case "r":
+                        mymq.recibir(ciclos);
+            }            
+        }
+    }
+    
+    
+    public void readProp(){
         
     }
+    
     
 }

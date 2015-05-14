@@ -28,14 +28,27 @@ public class Comunication {
         //System.out.println("FROM SERVER: " + modifiedSentence);
         clientSocket.close();
     }
-    
-    public String convertTOJson(){
+    public String recieve(String host, int port, String msg) throws IOException
+    {
+        String modifiedSentence;
+        String sentence = msg;
+        BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
+        Socket clientSocket = new Socket(host, port);
+        DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+        BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        sentence = inFromUser.readLine();
+        outToServer.writeBytes(sentence + '\n');
+        modifiedSentence = inFromServer.readLine();
+        System.out.println("FROM SERVER: " + modifiedSentence);
+        clientSocket.close();
+        
+        return modifiedSentence;     
         
         
         
-        
-        return "";
     }
+    
+
 }
     
 
