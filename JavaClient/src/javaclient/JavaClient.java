@@ -6,6 +6,9 @@
 package javaclient;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import logic.MyMQ;
 
@@ -18,20 +21,20 @@ public class JavaClient {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         while (true){
             System.out.println("Producir: P / Recibir: R");
             String opcion;
-            Scanner scanIn = new Scanner(System.in);
-            opcion = scanIn.nextLine();
+            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+	    opcion = bufferRead.readLine();
+ 
             if (opcion.equalsIgnoreCase("s")){
                 return;
             }
             System.out.println("Cantidad de ciclos: ");
             int ciclos;
-            Scanner scanInt = new Scanner(System.in);
-            ciclos = scanIn.nextInt();      
+            ciclos = Integer.parseInt(bufferRead.readLine());
             //scanIn.close();
 
             //System.out.println("Hola me estoy ejecutando");

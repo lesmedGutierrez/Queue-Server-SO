@@ -6,7 +6,9 @@
 package logic;
 
 import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -49,10 +51,27 @@ public class MyMQ {
     
     public void recibir(int ciclos){
         
-
+        String recieve;
         for (int i = 0; i < ciclos; i++) {
             try {
-                communication.recieve(host, port, "1");
+                recieve = communication.recieve(host, port, "1");
+                
+                
+                Gson gson = new Gson();
+                DefaultMensaje def_msg;
+                String ced="";
+                
+                //recieve = recieve.replace('\0','0');
+                System.out.println(" string recibido :" + recieve);
+                JsonReader reader = new JsonReader(new StringReader(recieve));
+                reader.setLenient(true);
+                    def_msg = gson.fromJson(reader, DefaultMensaje.class);
+                    ced = def_msg.Cedula;
+               
+                
+                System.out.println(ced);
+                
+                                
             } catch (IOException ex) {
                 Logger.getLogger(MyMQ.class.getName()).log(Level.SEVERE, null, ex);
             }
