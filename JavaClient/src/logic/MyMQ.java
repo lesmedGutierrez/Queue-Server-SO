@@ -49,7 +49,7 @@ public class MyMQ {
         }
     }
     
-    public void recibir(int ciclos){
+    public void recibir(int ciclos, String DB_server){
         
         String recieve;
         for (int i = 0; i < ciclos; i++) {
@@ -67,18 +67,24 @@ public class MyMQ {
                 reader.setLenient(true);
                     def_msg = gson.fromJson(reader, DefaultMensaje.class);
                     ced = def_msg.Cedula;
-               
-                
-                System.out.println(ced);
-                
+                insert(def_msg,DB_server);
+                               
                                 
             } catch (IOException ex) {
                 Logger.getLogger(MyMQ.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         }
-    }
         
+       
+    }
+    public void insert(DefaultMensaje def_msj, String DB_Server)
+    {
+        
+        
+        def_msj.insertMensaje(DB_Server);
+            
+    } 
         
         
         

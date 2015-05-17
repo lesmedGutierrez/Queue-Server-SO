@@ -30,14 +30,15 @@ import java.util.logging.Logger;
         this.Cedula = Cedula;
         this.Nombre = Nombre;
     }
-     public void insertMensaje() {
+     public void insertMensaje(String DB_server) {
         try {
-            String url = "jdbc:sqlserver://localhost;databaseName=BSO;user=BSO;password=321";
+            
+            String url = "jdbc:sqlserver://"+DB_server+";databaseName=BSO;user=BSO;password=321";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             Connection conn = DriverManager.getConnection(url);
             Statement st = conn.createStatement();
-            String sql = "insMensaje ?,?,?,?";
+            String sql = "insertarMsj ?,?,?,?";
             PreparedStatement preparedStmt = conn.prepareStatement(sql);
             preparedStmt.setString(1, Servidor);
             preparedStmt.setString(2, Fecha);
@@ -48,7 +49,8 @@ import java.util.logging.Logger;
             conn.close();
         } catch (SQLException sqle) {
             System.out.println("Sql exception " + sqle);
-        } catch (ClassNotFoundException ex) {
+        } 
+        catch (ClassNotFoundException ex) {
             Logger.getLogger(DefaultMensaje.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
