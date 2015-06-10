@@ -39,10 +39,10 @@ public class JavaClient {
             //System.out.println("Hola me estoy ejecutando");
             readProperties rp = new readProperties();
 
-                    rp.setPropertie("host", "127.0.0.1");
-                    rp.setPropertie("port", "13000");
-                    rp.setPropertie("ciclos", "12");
-                    rp.setPropertie("DB_Server", "127.0.0.1");
+//                    rp.setPropertie("host", "127.0.0.1");
+//                    rp.setPropertie("port", "13000");
+//                    rp.setPropertie("ciclos", "12");
+//                    rp.setPropertie("DB_Server", "127.0.0.1");
             String DB_server = rp.getPropertie("DB_Server");
 
             String host = rp.getPropertie("host");
