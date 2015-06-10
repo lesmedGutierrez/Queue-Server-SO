@@ -230,4 +230,3 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 /JavaClient/nbproject/private/
-/JavaClient/dist/
