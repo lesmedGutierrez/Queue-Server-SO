@@ -39,6 +39,10 @@ public class Comunication {
     {
         String modifiedSentence;
         String sentence = msg;
+        byte[] sb = {24,20,19};
+        
+        
+        
         byte[] byt = msg.getBytes("UTF-8"); //Convert a Java String to an ASCII byte array
 
         //BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
