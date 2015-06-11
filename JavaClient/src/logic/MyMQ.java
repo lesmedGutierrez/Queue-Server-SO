@@ -52,6 +52,10 @@ public class MyMQ {
     public void recibir(int ciclos, String DB_server){
         
         String recieve;
+        
+        long currentTimeMillis = System.currentTimeMillis();
+        
+        
         for (int i = 0; i < ciclos; i++) {
             try {
                 recieve = communication.recieve(host, port, "1");
@@ -75,6 +79,10 @@ public class MyMQ {
             }
             
         }
+        long currentTimeMillisFin = System.currentTimeMillis();
+        
+        
+        System.out.println(" Tiempo Final: "   + (currentTimeMillisFin  - currentTimeMillis) + " milisegundos");
         
        
     }
